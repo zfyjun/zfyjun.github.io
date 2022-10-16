@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>计算机系统</title>
+      <link href="/2022/10/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/"/>
+      <url>/2022/10/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</url>
+      
+        <content type="html"><![CDATA[<p>计算机系统知识学习</p><span id="more"></span><h1 id="计算机系统"><a href="#计算机系统" class="headerlink" title="计算机系统"></a>计算机系统</h1><h2 id="冯诺依曼体系"><a href="#冯诺依曼体系" class="headerlink" title="冯诺依曼体系"></a>冯诺依曼体系</h2><pre><code>冯诺依曼体系结构：控制器，运算器，存储器，输入、输出设备冯诺依曼结构特点：    冯诺依曼结构（存储程序结构）以存储器为中心    冯诺依曼体系中，程序和数据都位于存储子系统中    存储器按地址访问，是顺序编址的一维结构    指令顺序执行，按照在内存中的存放顺序执行，分支可以由跳转指令实现</code></pre><h2 id="处理器结构及工作原理"><a href="#处理器结构及工作原理" class="headerlink" title="处理器结构及工作原理"></a>处理器结构及工作原理</h2><pre><code>指令：由操作码加地址码组成常量位于代码段中，变量位于数据段总线由数据总线，地址总线，控制总线构成数据总线和控制总线是双向的，地址总线是单向的计算机工作本质就是执行程序的过程指令执行过程：取指令，分析指令，执行指令一条指令由多个微指令构成，每个微指令执行时间为一个时钟周期数据寄存器的作用：    中转站    做缓存，弥补弥补速度上的差异    兼做操作数寄存器CPU子系统：    控制器    运算器    寄存器组：通用寄存器，专用寄存器(IR 指令寄存器，PC AR PSW)微程序控制器并发：在同一段时间内进行并行：在同一时刻进行流水线技术，超标量技术计算机体系结构分类：SISD计算机，SIMD计算机，MISD计算机，MIMD计算机</code></pre><h2 id="存储器结构"><a href="#存储器结构" class="headerlink" title="存储器结构"></a>存储器结构</h2><pre><code>分层的存储子系统(cpu寄存器，内部，外部，主存，)    功能：        1、存放数据或程序        2、有编址的一维线性结构        3、访问（读写）</code></pre><h2 id="计算机性能量纲"><a href="#计算机性能量纲" class="headerlink" title="计算机性能量纲"></a>计算机性能量纲</h2><pre><code>字长、访存空间、系统响应时间、运行速度CPI：指令执行的平均周期数</code></pre><h1 id="计算机操作系统"><a href="#计算机操作系统" class="headerlink" title="计算机操作系统"></a>计算机操作系统</h1><h2 id="引论"><a href="#引论" class="headerlink" title="引论"></a>引论</h2><ul><li><p>操作系统提供的三大接口：图形、命令、程序</p></li><li><p>操作系统的基本特征</p><ul><li>并发：指在计算机系统中同时存在着多道运行的程序（进程）</li><li>并行：多道程序同一时刻执行<ul><li>程序的并发执行能有效改善系统资源的利用率，但使系统复杂化，因此操作系统必须对并发活动进行管理和控制</li><li>并发是操作系统最重要的特征，其他特征均以此为前提</li></ul></li><li>共享<ul><li>并发和共享是操作系统最基本的特征，二者互为存在条件</li><li>资源共享方式：互斥共享式、同时访问式</li></ul></li><li>虚拟</li><li>异步</li></ul></li><li><p>功能</p><ul><li><p>处理机管理的功能</p><ul><li>主要任务</li><li>功能<ul><li>进程控制</li><li>进程同步</li><li>进程通信</li><li>调度</li></ul></li></ul></li><li><p>存储器管理</p><ul><li>任务</li><li>功能<ul><li>内存的分配与回收</li><li>存储保护</li><li>地址映射</li><li>内存扩充</li></ul></li></ul></li><li><p>设备管理</p><ul><li>功能<ul><li>缓冲管理</li><li>设备分配</li><li>设备处理</li><li>虚拟设备</li></ul></li></ul></li><li><p>文件管理</p><ul><li>功能<ul><li>文件存储空间的管理</li><li>目录管理</li><li>文件的读写管理</li><li>文件的共享与保护</li></ul></li></ul></li><li><p>用户接口</p><ul><li>功能<ul><li>命令接口</li><li>程序接口</li></ul></li></ul></li></ul></li><li><p>系统分类</p><ul><li>单道批操作系统，多道批处理系统，分时系统，实时系统</li></ul></li><li><p>程序并发执行的特征</p><ul><li>间断性、失去封闭性、不可在现性</li></ul></li><li><p>进程的定义、特征</p></li></ul><h1 id="线程的同步"><a href="#线程的同步" class="headerlink" title="线程的同步"></a>线程的同步</h1><ul><li><p>进程之间在逻辑上存在着两种制约关系</p><ul><li><p>直接制约关系（进程同步）</p><ul><li>为完成同一个任务的诸多进程间，因需要协调透明的工作而相互等待，相互交换信息所产生的直接制约关系</li></ul></li><li><p>间接制约关系（进程互斥）</p><ul><li>是进程共享独占型资源而必须互斥执行的间接制约关系</li></ul></li></ul></li><li><p>资源的类型：独占、共享、其他</p><ul><li>临界资源：一次值允许一个进程使用的资源，也叫做互斥共享式资源</li></ul></li><li><p>信号量机制</p><ul><li>整形信号量：系统里面所剩余的这一类资源的个数</li><li>记录型信号量：</li><li>AND型信号量、一般集信号量</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+          <category> 计算机系统 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机网络</title>
+      <link href="/2022/10/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <url>/2022/10/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
+      
+        <content type="html"><![CDATA[<p>计算机网络学习</p><span id="more"></span><h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="网络分类及拓扑"><a href="#网络分类及拓扑" class="headerlink" title="网络分类及拓扑"></a>网络分类及拓扑</h2><pre><code>WAN的拓扑结构：重要概念：通信子网（路由？），资源子网路由：选择路径WAN中的数据传输：重要软件：wireshark数据以package（包、分组）的形式进行传输base64编码</code></pre><h2 id="按通信介质分类"><a href="#按通信介质分类" class="headerlink" title="按通信介质分类"></a>按通信介质分类</h2><pre><code>有线网：双绞线，光纤无线网：WIFI</code></pre><hr><h1 id="网络分层及协议"><a href="#网络分层及协议" class="headerlink" title="网络分层及协议"></a>网络分层及协议</h1><h2 id="分层的网络和协议"><a href="#分层的网络和协议" class="headerlink" title="分层的网络和协议"></a>分层的网络和协议</h2><pre><code>协议：对等通信双方（对等层）的通信规则接口：上层通过接口调用下层为其提供的原语操作和服务网络体系结构：网络的各层及其协议的集合</code></pre><h2 id="网络服务类型"><a href="#网络服务类型" class="headerlink" title="网络服务类型"></a>网络服务类型</h2><pre><code>服务存在与同一主机上下层之间面向连接：通信经过建立连接，数据传输，释放连接3个过程，相当于建立了一根数据管道，个数据包走相同路径，顺序到达面向非连接：发送数据前不建立连接，每个数据都包含最终目的地址</code></pre><h2 id="服务原语"><a href="#服务原语" class="headerlink" title="服务原语"></a>服务原语</h2><ul><li><p>网络参考模型</p><ul><li>The OSI refence model(七层模型)<ul><li>PDU：协议数据单元</li><li>物理层：PDU为位</li><li>数据链路层：PDU为帧，处理点到点链路(直接链路，没有中间结点)</li><li>网络层：PDU为包&#x2F;分组，在通信子网中为包寻找合适的网络路径</li><li>传输层：PDU为段，端到端的连接</li><li>会话层</li><li>表式层</li><li>应用层：PDU为消息</li><li>数据由下封装</li></ul></li></ul></li><li><p>网络实例</p><ul><li>电信、联通、教育网、移动等</li></ul></li><li><p>ISP：服务提供商</p></li><li><p>以太网：802.3</p></li><li><p>无线局域网：802.11</p></li><li><p>度量单位</p><ul><li>计算机领域：byte,K,M,G,分别为2^10,2^20,2^30</li><li>通信领域：分别为2^</li></ul></li><li><p>小结</p><ul><li>网络概念</li><li>C&#x2F;S,B&#x2F;S</li><li>LAN，MAN，WAN，internet</li><li>协议</li><li>服务</li></ul></li><li><p>物理层</p><ul><li>定义了机械，电气及时序电路的接口</li></ul></li></ul><p>看4看高清电影的带宽是多少</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构</title>
+      <link href="/2022/09/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <url>/2022/09/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+      
+        <content type="html"><![CDATA[<p>数据结构知识学习</p><span id="more"></span><h2 id="算法的基本概念"><a href="#算法的基本概念" class="headerlink" title="算法的基本概念"></a>算法的基本概念</h2><h3 id="什么是算法"><a href="#什么是算法" class="headerlink" title="什么是算法"></a>什么是算法</h3><ul><li><p>程序&#x3D;数据结构+算法</p><ul><li>数据结构是要处理的信息</li><li>算法是处理信息的步骤</li></ul></li></ul><h3 id="算法的五个特征"><a href="#算法的五个特征" class="headerlink" title="算法的五个特征"></a>算法的五个特征</h3><ul><li><p>有穷性</p><ul><li><p>有穷时间能执行完</p><ul><li>算法是有穷的</li><li>程序可以是无穷的</li></ul></li></ul></li><li><p>确定性</p><ul><li>相同输入产生相同输出</li></ul></li><li><p>可行性</p><ul><li>可以用于已有的基本操作实现算法</li></ul></li><li><p>输入</p><ul><li>丢给算法处理的数据</li></ul></li><li><p>输出</p><ul><li>算法处理的结果</li></ul></li></ul><h3 id="“好”算法的特质"><a href="#“好”算法的特质" class="headerlink" title="“好”算法的特质"></a>“好”算法的特质</h3><ul><li><p>正确性</p><ul><li>正确解决问题</li></ul></li><li><p>可读性性</p><ul><li>对算法的描述能让其他人看懂</li></ul></li><li><p>健壮性</p><ul><li>算法能处理一些异常情况</li></ul></li><li><p>高效率与低存储量需求</p><ul><li>时间复杂度低，空间复杂度低</li><li>常见的复杂度比较：O(1)&lt;O(log2n)&lt;O(n)&lt;O(nlog2n)&lt;O(n<em>2)&lt;O(<em>3)&lt;O(2</em>n)&lt;O(n!)&lt;O(n</em>n)</li></ul></li></ul><h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><h3 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><ul><li><p>定义</p><ul><li>具有相同数据类型的n个数据元素的有限序列，其中n为表长，n&#x3D;0时线性表时一个空表</li></ul></li><li><p>几个概念：位序，表头元素，表尾元素，直接前驱，直接后驱</p></li><li><p>基本操作</p><ul><li>所有数据结构都适用的记忆思路（创销，增删改查）</li><li>初始化表，销毁操作，插入，删除，按值查找，按位查找</li><li>其他常用操作：求表长，判空</li></ul></li></ul><h3 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h3><ul><li><p>顺序表(顺序存储)</p><ul><li><p>定义</p><ul><li>用顺序存储(把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中)的方式实现线性表</li></ul></li><li><p>实现</p><ul><li>静态分配(静态数组)</li><li>动态分配(用指针指向动态分配的数组空间)</li></ul></li><li><p>特点</p><ul><li>随机访问：能在O(1)时间找到第i个元素</li><li>存储密度大</li><li>拓展容量不方便</li><li>插入，删除数据元素不方便</li></ul></li></ul></li><li><p>链表(链式存储)</p><ul><li><p>单链表</p><ul><li><p>定义</p><ul><li>用链式存储实现了线性结构</li><li>一个节点存储一个数据元素</li><li>各节点间的先后关系用一个指针表示</li></ul></li><li><p>实现</p><ul><li>带头结点(更方便一些，注意：头结点不带数据)</li><li>不带头结点</li></ul></li><li><p>建立</p><ul><li>尾插法(设置一个尾指针)</li><li>头插法</li></ul></li><li><p>基本操作</p><ul><li>插入(指定结点的前插、后插，按位序插入)</li><li>删除(按位序删除，指定结点的删除)</li><li>查找(按位查找，按值查找)</li></ul></li></ul></li><li><p>双链表</p><ul><li>初始化(每个结点有两个指针：前项指针，后向指针)</li></ul></li><li><p>循环链表</p><ul><li><p>循环单链表(最后一个结点指向头结点)</p><ul><li>初始化：头结点next应指向头结点</li></ul></li><li><p>循环双链表(表头结点的prior指向尾结点，表尾结点的next指向头结点)</p><ul><li><p>初始化</p></li><li><p>代码问题</p><ul><li>如何判空</li><li>如何判断p是否是表头、表尾结点</li><li>如何在表头、表中、表尾插入&#x2F;删除一个结点</li></ul></li></ul></li></ul></li><li><p>静态链表(用数组方式实现的链表)</p><ul><li>定义：分配一整片连续的内存空间，各个结点集中安置</li></ul></li></ul></li></ul><h2 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h2><pre><code>定义：栈是只允许在一端进行插入或删除操作的线性表重要术语：    栈顶(允许插入和删除的一端)、栈底、空栈特点：后进先出基本操作：    初始化、销毁、进栈、出栈(创、销、增、删)</code></pre><h2 id="顺序栈-用顺序存储方式实现的栈"><a href="#顺序栈-用顺序存储方式实现的栈" class="headerlink" title="顺序栈(用顺序存储方式实现的栈)"></a>顺序栈(用顺序存储方式实现的栈)</h2><pre><code>实现: 用静态数组实现，并需要记录栈顶指针    typedef struct&#123;        ElemType data[MaxSize];     //静态数组存放栈中元素        int top;    //栈顶指针    &#125;SqStack;缺点：栈的大小不可变共享栈：两个栈共享同一片内存空间，两个栈从两边往中间增长实现：   typedef struct&#123;            ElemType data[MaxSize];     //静态数组存放栈中元素            int top0;    //0号栈栈顶指针，初始化时=-1            int top1;    //1号栈栈顶指针，初始化时=MaxSize        &#125;SqStack;栈满条件：top0+1==top1</code></pre><h2 id="链栈-用链式存储方式实现的栈"><a href="#链栈-用链式存储方式实现的栈" class="headerlink" title="链栈(用链式存储方式实现的栈)"></a>链栈(用链式存储方式实现的栈)</h2><pre><code>实现：  typedef struct Linknode&#123;            ElemType data;     //数据域            struct Linknode *next;    //指针域        &#125;*LiStack;</code></pre><h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><pre><code>定义：是只允许在一端进行插入，另一端进行删除操作的线性表特点：先进先出重要术语：队头(允许删除的一端)、队尾(允许插入的一端)、空队列基本操作：初始化、销毁、入队、出队(创、销、增、删)</code></pre><h2 id="顺序存储"><a href="#顺序存储" class="headerlink" title="顺序存储"></a>顺序存储</h2><pre><code>实现：  typedef struct&#123;            ElemType data[MaxSize];     //用静态数组存放队列元素            int front,rear;    //队头指针，队尾指针        &#125;SqQuence;掌握：    如何初始化、入队、出队    如何判空、判满    如何计算队列长度队空条件：队尾指针和对头指针指向同一个位置队满条件：队尾指针的下一个是对头指针队列元素个数：(rear+MaxSize-front)%MaxSize</code></pre><h2 id="链式存储"><a href="#链式存储" class="headerlink" title="链式存储"></a>链式存储</h2><pre><code>实现：  typedef struct LinkNode&#123;    //链式队列结点            ElemType data;                 struct LinkNode *next;            &#125;LinkNode;        typedef struct&#123;            LinkNode *front,*rear;  //队列的对头和队尾指针        &#125;LinkQueue;</code></pre><h2 id="双端队列"><a href="#双端队列" class="headerlink" title="双端队列"></a>双端队列</h2><pre><code>判断栈的合法输出序列：卡特兰数(1/(n+1))*排列组合C(2n,n)栈中合法的序列，双端队列中也一定合法输入受限的双端序列，输出受限的双端序列</code></pre><h2 id="栈的应用"><a href="#栈的应用" class="headerlink" title="栈的应用"></a>栈的应用</h2><pre><code>用栈实现括号匹配表达式求值：    算术表达式：由操作符、运算符、界限符组成    三种算术表达式：        中缀表达式            运算符在操作数中间：a+b        后缀表达式(逆波兰表达式)            运算符在操作数后面：ab+        前缀表达式(波兰表达式)            运算符在操作数前面：+ab            运算符在操作数前面：+ab    中缀转后缀的手算手法：&quot;左优先&quot;原则，只要左边的运算符能先计算，就优先算左边的    中缀转前缀的手算手法：&quot;右优先&quot;原则，只要右边的运算符能先计算，就优先算右边的    中缀转后缀的机算：        1.遇到操作数。直接加入后缀表达式        2.遇到界限符。遇到&#39;(&#39;直接入栈；遇到&#39;)&#39;则依次弹出栈内运算符并加入后缀表达式，直到弹出&#39;(&#39;为止。注意：&#39;(&#39;不加入后缀表达式        3.遇到运算符。依次弹出栈中优先级高于或等于当前运算符的所有运算符，并加入后缀表达式，若遇到&#39;(&#39;或栈空则停止。之后再把当前运算符入栈    中缀表达式的计算(用栈实现)        初始化两个栈，操作数栈和运算符栈        若扫描到操作数，压入操作数栈        若扫描到运算符或界限符，按照中缀转后缀相同逻辑压入运算符栈(期间若弹出运算符，则弹出两个操作数栈的栈顶元素进行计算，并压回操作数栈)栈在递归中的应用</code></pre><h2 id="队列应用"><a href="#队列应用" class="headerlink" title="队列应用"></a>队列应用</h2><pre><code>树的层次遍历，图的广度优先遍历</code></pre><h2 id="矩阵的存储"><a href="#矩阵的存储" class="headerlink" title="矩阵的存储"></a>矩阵的存储</h2><pre><code>可用二维数组存放</code></pre><h2 id="串"><a href="#串" class="headerlink" title="串"></a>串</h2><pre><code>特殊的线性表，数据类型为字符字符串，是由多个或零个字符组成的有限序列子串：串中任意个连续的字符组成的子序列主串：包含子串的串存储结构串的模式匹配：    朴素模式匹配算法    KMP算法</code></pre><h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><pre><code>基本概念    结点、边、根节点、叶子结点、子树基本术语常考性质：    结点数=总度数+1    度为m的树，m二叉树的区别    高度为h的二叉树至多有2^h-1个结点    度为m的树第i层至多由m^(i-1)个结点（i&gt;=1）    高度为h的m茶树至多有(m^h-1)/(m-1)个结点    具有n个结点的m茶树的最小高度为[logm(n(m-1)+1)]</code></pre><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><h3 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h3><h3 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h3><pre><code>存储结构（适合存储完全二叉树）</code></pre><h3 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h3><h3 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h3><pre><code>设非空二叉树中度为0、1、2的结点个数为n0,n1,n2，则n0=n2+1链式存储    typedef struct BiTNode&#123;        ElemType data;      //数据域        struct BiTNode *lchild,*rchild;     //左右孩子结点        //struct BiTNode *parent;(三叉链表)     //父节点指针    &#125;BiTNode,*BiTree;    n个结点的二叉链表共有n+1个空链域二叉树的遍历    先序(根左右)、后序(左右根)、中序(左根右)层序遍历    算法思想：        初始化一个辅助队列        根结点入队        若队列非空，则队头结点入队，访问该结点，并将其左、右孩子插入队尾（如果有的话）线索二叉树    typedef struct ThreadNode&#123;        ElemType data;              struct ThreadNode *lchild,*rchild;             int ltag,rtag;  //左、右线索标志(tag=0指向孩子，tag=1指向线索)    &#125;ThreadNode,*ThreadTree;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World！！！</title>
+      <link href="/2022/09/23/hello-world/"/>
+      <url>/2022/09/23/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
